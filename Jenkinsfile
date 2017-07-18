@@ -3,9 +3,10 @@ node {
 
     stages {
         stage('Build') {
-            steps {
-                echo 'Building..'
-            }
+         sh 'node -v'
+         sh 'npm prune'
+         sh 'npm install'
+         sh 'npm test'
         }
         stage('Test') {
             steps {
