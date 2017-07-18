@@ -1,16 +1,16 @@
 node {
 
-	stage(‘Pull’) {
-                checkout scm
+	stage('Pull') {
+            checkout scm
         }
         stage('Build') {
-                sh ‘npm i’ 
+            sh ‘npm i’
         }
         stage('Test') {
-                echo 'Testing..'
+            echo 'Testing..'
         }
         stage('Deploy') {
-                echo 'Deploying....'
+            echo 'Deploying....'
         }
 
 }
