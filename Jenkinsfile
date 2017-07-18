@@ -1,10 +1,10 @@
 node {
-
+	def app
 	stage('Pull') {
             checkout scm
         }
         stage('Build') {
-          def app = docker.build "dummy-node-devops"
+          app = docker.build "dummy-node-devops"
         }
         stage('Test') {
             echo 'Testing..'
