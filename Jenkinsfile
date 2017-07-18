@@ -1,10 +1,6 @@
 node {
-    agent any
-
     stages {
         stage('Build') {
-         sh 'node -v'
-         sh 'npm prune'
          sh 'npm install'
          sh 'npm test'
         }
