@@ -4,7 +4,7 @@ node {
             checkout scm
         }
         stage('Build') {
-          app = docker.build "dummy-node-devops"
+          app = docker.build("dummy-node-devops")
         }
         stage('Test') {
             echo 'Testing..'
