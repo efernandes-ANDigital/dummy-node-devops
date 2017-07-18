@@ -1,7 +1,7 @@
 node {
 
         stage('Build') {
-                echo 'Building..' 
+               sh ‘npm i’
         }
         stage('Test') {
                 echo 'Testing..'
