@@ -4,13 +4,17 @@ node {
             checkout scm
         }
         stage('Build') {
-            sh 'node -v'
+          def app = docker.build "dummy-node-devops"
         }
         stage('Test') {
             echo 'Testing..'
         }
         stage('Deploy') {
-            echo 'Deploying....'
+            docker.withRegistry('https://registry.hub.docker.com',
+						'docker-hub-credentials') {
+							app.push("${env.BUILD_NUMBER}")
+							app.push("latest")
+						}
         }
 
 }
