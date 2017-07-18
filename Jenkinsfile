@@ -13,10 +13,5 @@ node {
                 echo 'Testing..'
             }
         }
-        stage(‘Push Image’) {
-            steps {
-                echo 'Deploying....'
-            }
-        }
     }
 }
