@@ -1,12 +1,20 @@
 node {
+    agent any
+
     stages {
         stage('Build') {
-         sh 'npm install'
-         sh 'npm test'
+            steps {
+                echo 'Building..'
+            }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
