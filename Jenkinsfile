@@ -4,7 +4,7 @@ node {
             checkout scm
         }
         stage('Build') {
-            sh 'npm i'
+            sh 'node -v'
         }
         stage('Test') {
             echo 'Testing..'
